@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from 'src/service/data.service';
+import { GetApiService } from './get-api.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { DataService } from 'src/service/data.service';
 })
 export class AppComponent {
   constructor(
-    private dataService: DataService,
+    private api:GetApiService
   ) { }
   
   title = 'TodoList';
@@ -16,7 +16,9 @@ export class AppComponent {
   list:any[]=[];
 
   ngOnInit(){
-    console.log(this.dataService.getTodos());
+    this.api.apiCall().subscribe((data) => {
+      console.warn("get api data", data);
+    })
   }
 
   addTodo(item:string)
