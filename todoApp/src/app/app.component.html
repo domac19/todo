@@ -6,6 +6,6 @@
 <br>
 <br>
 
-<ul *ngFor="let item of list">
+<ul ui-sortable="todoSortable" *ngFor="let item of list">
     <li>{{ item.name }}<button (click)="removeTodo(item.id)">Delete</button></li>
 </ul>

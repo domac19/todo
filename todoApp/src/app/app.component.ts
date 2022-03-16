@@ -6,6 +6,7 @@ import { GetApiService } from './get-api.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   constructor(
     private api:GetApiService
@@ -22,20 +23,16 @@ export class AppComponent {
   }
 
   addTodo(item:string)
-  {
-    //this.dataService.addTodo()
+  { 
     this.list.push({id:this.list.length, name:item});
     console.warn(this.list);
   }
 
-  //update todo
 
   removeTodo(id:number)
   {
-    //dataservice
     console.warn(id);
     this.list=this.list.filter(item => item.id !== id);
   }
 
-  
 }
