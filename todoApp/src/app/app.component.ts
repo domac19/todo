@@ -8,17 +8,17 @@ import { GetApiService } from './get-api.service';
 })
 
 export class AppComponent {
+  title = 'TodoList';
   constructor(
     private api:GetApiService
   ) { }
   
-  title = 'TodoList';
-
+  
   list:any[]=[];
 
   ngOnInit(){
     this.api.apiCall().subscribe((data) => {
-      console.warn("get api data", data);
+      console.log("get api data", data);
     })
   }
 

@@ -12,6 +12,6 @@ export class GetApiService {
 
   apiCall()
   {
-    return this.http.get(`https://localhost:44376/swagger`);
+    return this.http.get(`https://localhost:44376/api/Todos`);
   }
 }
