@@ -1,11 +1,24 @@
-<h1>{{ title }}</h1>
-<input type="text" placeholder="Enter your todo here" #todo>
+<h1 id="todo-title">{{ title }}</h1>
+<input id="todo-input" type="text" placeholder="Enter your todo here" #todo>
 <br>
 <br>
-<button (click)="addTodo(todo.value)">Add new todo</button>
+<button id="todo-input" (click)="addTodo(todo.value)">Add new todo</button>
 <br>
 <br>
-
-<ul ui-sortable="todoSortable" *ngFor="let item of list">
+<ul id="todo-input" ui-sortable="todoSortable" *ngFor="let item of list">
     <li>{{ item.name }}<button (click)="removeTodo(item.id)">Delete</button></li>
 </ul>
+<table id="todo-table" border="1">
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Completed</td>
+        <td>DateCreated</td>
+    </tr>
+    <tr *ngFor="let item of data">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.completed }}</td>
+        <td>{{ item.dateCreated }}</td>
+    </tr>
+</table>

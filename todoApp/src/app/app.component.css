@@ -1,3 +1,13 @@
-#body {
-  color: aqua;
+#todo-title {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 50px;
+  margin-left: 35%;
+}
+
+#todo-table{
+  margin: 5% 4% 4% 35%;
+}
+
+#todo-input{
+  margin-left: 35%;
 }

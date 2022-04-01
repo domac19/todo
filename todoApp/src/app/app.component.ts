@@ -9,18 +9,17 @@ import { GetApiService } from './get-api.service';
 
 export class AppComponent {
   title = 'TodoList';
-  constructor(
-    private api:GetApiService
-  ) { }
+  data:any;
+  constructor(private api:GetApiService) {}
   
+  ngOnInit(){
+    this.api.apiCall().subscribe((result) => {
+      console.log("get api data", result)
+      this.data = result
+    })
+  }  
   
   list:any[]=[];
-
-  ngOnInit(){
-    this.api.apiCall().subscribe((data) => {
-      console.log("get api data", data);
-    })
-  }
 
   addTodo(item:string)
   { 
