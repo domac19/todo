@@ -8,6 +8,7 @@
 <ul id="todo-input" ui-sortable="todoSortable" *ngFor="let item of list">
     <li>{{ item.name }}<button (click)="removeTodo(item.id)">Delete</button></li>
 </ul>
+<p id="todo-input">Stuff in todo list</p>
 <table id="todo-table" border="1">
     <tr>
         <td>Id</td>
