@@ -12,6 +12,6 @@ export class GetApiService {
 
   apiCall()
   {
-    return this.http.get(`https://localhost:44376/api/Todos`);
+    return this.http.get(`https://localhost:44376/api/Todo`);
   }
 }
